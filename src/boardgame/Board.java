@@ -6,6 +6,7 @@ public class Board {
 	private int columns;
 	private Piece[][] pieces;
 	
+	//Cria o tabuleiro
 	public Board(int rows, int columns) {
 		if(rows < 1 || columns < 1) {
 			throw new BoardException("Error creating board: there must be at least 1 row and 1 column.");
@@ -47,6 +48,7 @@ public class Board {
 		piece.position = position;
 	}
 	
+	//Remove a peça na posição
 	public Piece removePiece(Position position) {
 		if(!positionExists(position)) {
 			throw new BoardException("Position not on the board.");
